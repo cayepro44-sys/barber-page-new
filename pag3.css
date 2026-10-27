@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --gold: rgb(36, 132, 243);
+    --black: #050505;
+    --dark: #080808;
+    --gray: #aaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b10;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:transparent;
+    backdrop-filter: blur(12px);
+    z-index: 10;
+
+
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+
+}
+
+.logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 900;
+
+}
+
+.logo span {
+    color: rgb(36, 132, 243);
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #d0d5dd;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: goldenrod;
+    transform: translatex(10px);
+
+
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: rgb(3, 157, 218);
+    color: #050505;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: 1px solid rgb(3, 157, 218);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg,
+            rgb(36, 132, 243),
+            #080b10);
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    color: skyblue;
+}
+
+
+.gold {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 8% 80px;
+    background:
+        radial-gradient(ellipse at 15% 50%,
+            rgba(36, 132, 243, 0.20),
+            transparent 50%),
+        linear-gradient(120deg,
+            #080b10,
+            #101722 55%,
+            #080b10);
+}
+
+
+.gold-content {
+    max-width: 700px;
+ text-align: center;
+
+}
+
+.subtitle,
+.section-title p,
+.cta p {
+    color: skyblue;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.gold h1 {
+    margin: 15px 0;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(60px, 10vw, 80px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+.gold h1 span {
+    color: rgb(36, 132, 243);
+}
+
+.gold-text {
+    max-width: 550px;
+    margin: 30px 0;
+    color: #b6bdc8;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+.gold-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.section {
+    padding: 100px 5%;
+    background: linear-gradient(145deg, #0d1118, #090b10);
+    border: 1px solid rgba(80, 130, 190, 0.30);
+    border-radius: 8px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+
+
+#servicios {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #10151d;
+    border: 1px solid #252d38;
+    border-radius: 8px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.3s;
+    color: rgb(255, 231, 93);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: goldenrod;
+}
+
+.service-icon {
+    font-size: 35px;
+    color: skyblue;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aab2bf;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.prices-section {
+    padding: 100px 8%;
+    background:
+        radial-gradient(ellipse at top,
+            rgba(36, 132, 243, 0.09),
+            transparent 65%),
+        #090b10;
+    border: 1px solid rgba(80, 130, 190, 0.30);
+    border-radius: 8px;
+}
+
+.price-list {
+    width: 70vw;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+}
+
+.price-item {
+    background: linear-gradient(135deg,
+            rgb(36, 132, 243),
+            rgb(20, 70, 130));
+    min-height: 150px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.price-item:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg,
+            goldenrod,
+            #080b10);
+}
+
+.price-item h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: rgb(213, 215, 233);
+}
+
+.price-item p {
+    color: #e0e5ed;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.price-item strong {
+    font-size: 22px;
+    color: white;
+    white-space: nowrap;
+}
+
+.barbers-grid {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+ 
+    gap: 30px;
+    margin-bottom: 75px;
+    justify-content: center;
+}
+
+.barber-card {
+    background: #10151d;
+    border: 1px solid #252d38;
+    text-align: center;
+    padding-bottom: 30px;
+    border-radius: 10px;
+
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 250px;
+}
+
+
+.barber-card:hover {
+    border-color: goldenrod;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px 5px  goldenrod;
+}
+
+.barber-photo {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at center,
+            rgba(36, 132, 243, 0.20),
+            transparent 65%),
+        #0b0f15;
+    border-bottom: 1px solid #252d38;
+}
+
+.foto:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 1px goldenrod;
+    
+}
+.barber-photo span {
+    font-family: "Oswald", sans-serif;
+    font-size: 80px;
+    color: rgb(36, 132, 243);
+}
+
+.barber-card h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.barber-card p {
+    color: skyblue;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+
+
+.gallery {
+    padding: 80px 8%;
+    background: linear-gradient(145deg, #0d1118, #090b10);
+    border: 1px solid goldenrod;
+    border-radius: 8px;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 180px;
+    background: #10151d;
+    border: 1px solid #252d38;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    border-color: goldenrod;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.cta {
+    padding: 70px 8%;
+    background: linear-gradient(110deg,
+            #0d121a,
+            #151d29,
+            #0b0f15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(36, 132, 243, 0.25);
+    border-bottom: 1px solid rgba(36, 132, 243, 0.25);
+}
+
+.cta h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 48px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+
+
+.contact {
+    padding: 100px .5% 40px;
+    background: linear-gradient(145deg, #0d1118, #090b10);
+    border: 1px solid rgba(80, 130, 190, 0.30);
+    border-radius: 8px;
+}
+
+.contact-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+
+    padding:20px 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #10151d;
+    border: 1px solid #252d38;
+    border-left: 3px solid skyblue;
+    border-radius: 5px;
+}
+
+.contact-item>span {
+    font-size: 25px;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #aab2bf;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.socials img {
+    height: 50px;
+    width: 50px;
+    transition:transform 0.3s;
+}
+
+.socials a:hover img{
+
+ transform: scale(1.1) rotate(30deg);
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: #10151d;
+    border: 1px solid #303947;
+    border-radius: 5px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: skyblue;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form select {
+    cursor: pointer;
+}
+
+.contact-form button {
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 6px;
+}
+
+
+
+.footer {
+   
+  
+    background: linear-gradient(135deg, #080b10, #0d1725);
+    border-top: 2px solid rgb(36, 132, 243);
+    padding: 55px 8% 20px;
+    color: #aab2bf;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+
+   display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: rgb(36, 132, 243);
+    margin-left: 6px;
+}
+
+.footer-brand p {
+    max-width: 350px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #8993a1;
+}
+
+.footer-bottom {
+
+    margin: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(36, 132, 243, 0.22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 15px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.footer-bottom span {
+    color: rgb(36, 132, 243);
+}
+
+.footer-credit {
+    color: #8993a1;
+ 
+}
